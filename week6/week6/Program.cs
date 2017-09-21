@@ -7,16 +7,18 @@ namespace week6
     {
         static void Main()
         {
-            int val = 999;
-            refMethod(ref val);
+            int val;   // do not initial value
+            refMethod(out val);
             Console.WriteLine(val);
             Console.ReadLine();
         }
 
-        static void refMethod(ref int i)
+        static void refMethod(out int i)
         {
+           i = 34;
             i = i + 1;
         }
+
     }
 }
     
